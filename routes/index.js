@@ -8,8 +8,8 @@ router.get('/', function (req, res, next) {
     res.render('index', { user: 'Guest' , ip: req.ip});
 });
 router.get('/controller.js', (req, res)=>{
-    // console.log(path.join(__dirname, 'views'));
-    res.sendFile(path.join(__dirname, 'controller.js'));
+    // console.log(path.join(__dirname, '../views/index.ejs'));
+    res.sendFile(path.join(__dirname, '../lib/controller.js'));
 });
 
 router.get('/favicon.ico', (req, res)=>{
