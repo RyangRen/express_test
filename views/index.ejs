@@ -13,16 +13,17 @@
 
 <!-- ! there is only one ng-app can exist -->
 
-<body ng-app="test_app">
-    
-    <div ng-controller="test_controller"> {{ current_time | date: 'yyyy-MM-dd HH:mm:ss'}} </div>
+<body ng-app="test_app" ng-controller="test_controller">
+    <div> {{ current_time | date: 'yyyy-MM-dd HH:mm:ss'}} </div>
     <br>
-    <div> welcome to express -- <%= user %></div>
+    <div> welcome to express -- <%= user %>
+    </div>
     <br>
-    <div ng-controller="test_controller"> {{helloTo.title}} </div>
+    <div> {{helloTo.title}} </div>
     <br>
+
     <!-- simple calculator -->
-    <div ng-controller='test_controller'>
+    <div>
         <input type="number" ng-model="param_a" ng-init="param_a=0"><br>
         <input type="number" ng-model="param_b" ng-init="param_b=0"><br>
         <button ng-click="calculate()">See answer</button>
@@ -31,8 +32,6 @@
         <h2>a * b = {{ result.mul }} </h2>
         <h2>a / b = {{ result.div }} </h2>
     </div>
-
-    <script> start_controller(); </script>
 
 </body>
 
