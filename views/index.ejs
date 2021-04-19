@@ -15,8 +15,10 @@
 
 <body ng-app="test_app">
     
+    <div ng-controller="test_controller"> {{ current_time | date: 'yyyy-MM-dd HH:mm:ss'}} </div>
+    <br>
     <div ng-controller="test_controller"> welcome to express -- <%= user %> ( <%= ip %> ) {{helloTo.title}} </div>
-
+    <br>
     <!-- simple calculator -->
     <div ng-controller='test_controller'>
         <input type="number" ng-model="param_a" ng-init="param_a=0"><br>
