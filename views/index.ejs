@@ -6,7 +6,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
-
+    <script src="/controller.js"></script>
     <title>Document</title>
 
 </head>
@@ -28,26 +28,7 @@
         <h2>a / b = {{ result.div }} </h2>
     </div>
 
-
-    <script>
-        angular.module("test_app", []).controller("test_controller", function ($scope) {
-            $scope.helloTo = {};
-            $scope.helloTo.title = "with AngularJS";
-
-            $scope.result = {};
-            $scope.result.sum = 0;
-            $scope.result.dif = 0;
-            $scope.result.mul = 0;
-            $scope.result.div = 0;
-            
-            $scope.calculate = () => {
-                $scope.result.sum = $scope.param_a + $scope.param_b;
-                $scope.result.dif = $scope.param_a - $scope.param_b;
-                $scope.result.mul = $scope.param_a * $scope.param_b;
-                $scope.result.div = $scope.param_a / $scope.param_b;
-            };
-        });
-    </script>
+    <script> start_controller(); </script>
 
 </body>
 
