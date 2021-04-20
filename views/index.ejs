@@ -27,12 +27,10 @@
         <input type="number" ng-model="param_a" ng-init="param_a=0"><br>
         <input type="number" ng-model="param_b" ng-init="param_b=0"><br>
         <button ng-click="calculate()">See answer</button>
-        <h2>a + b = {{ result.sum }} </h2>
-        <h2>a - b = {{ result.dif }} </h2>
-        <h2>a * b = {{ result.mul }} </h2>
-        <h2>a / b = {{ result.div }} </h2>
+        
+        <div ng-repeat="item in calculator">
+            <h2> a {{item.op}} b = {{item.result}}</h2>
+        </div>
     </div>
-
 </body>
-
 </html>
