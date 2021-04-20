@@ -1,31 +1,92 @@
-/* table{
-    width: 100%;
-    border: 1px solid;
-    border-radius: 5px;
+input.table-filter{
+    width: 75%;
+
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10%;
 }
-th, td{
-    border: 1px solid;
-} */
+
 table.flat-table
 {
-    display: block;
-    font-family: sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-size: 115%;
-    overflow: auto;
-    width: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 20px;
+    border-spacing: 0px;
     
+    width: 80%;
+
+    overflow: hidden;
+
+    font-size: 115%;
+    box-shadow: 8px 8px 20px rgb(0,0,0);
 }
-th.flat-table {
+table.flat-table>*{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+table.flat-table>tbody{
+    display: block;
+    height: 400px;
+    overflow-y: scroll;
+    float: left; 
+}
+
+table.flat-table>thead>tr, table.flat-table>tbody>tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table.flat-table>thead>tr>th{
     background-color: rgb(112, 196, 105);
     color: white;
     font-weight: normal;
     padding: 20px 30px;
-    text-align: center;
 }
-td.flat-table {
-    background-color: rgb(238, 238, 238);
-    color: rgb(111, 111, 111);
-    padding: 20px 30px;
-} 
+table.flat-table>tbody>tr>td{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 20px;
+}
+table.flat-table>tbody>tr:hover td{
+    background-color: rgb(129, 129, 129);
+}
+table.flat-table>tbody>tr:nth-child(odd){
+    background-color: rgb(221, 221, 221);
+}
+table.flat-table>tbody>tr:nth-child(even){
+    background-color: rgb(190, 190, 190);
+}
 
+/* table.flat-table
+{
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(234, 243, 241, 0.5);
+    box-shadow: 8px 8px 20px rgb(0,0,0);
+    border-radius: 20px;
+        
+    padding: 5px;
+}
+table.flat-table>tbody
+{
+    display: block;
+    height: 500px;
+    overflow-y: scroll;
+            
+}
+table.flat-table>tbody>tr, table.flat-table>thead>tr
+{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+table.flat-table>tbody>tr>td
+{
+    text-align: center;
+    padding: 2px;
+    font-size: 25px;
+} */
