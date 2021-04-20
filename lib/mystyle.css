@@ -1,0 +1,31 @@
+/* table{
+    width: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+th, td{
+    border: 1px solid;
+} */
+table.flat-table
+{
+    display: block;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 115%;
+    overflow: auto;
+    width: auto;
+    
+}
+th.flat-table {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+}
+td.flat-table {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 20px 30px;
+} 
+

@@ -22,5 +22,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/lib', libsRouter);
 
-
 module.exports = app;

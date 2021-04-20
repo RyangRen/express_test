@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/mystyle.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="/lib/controller.js"></script>
     <title>Document</title>
@@ -26,13 +27,37 @@
     <div>
         <h2> Simple Calculator </h2>
         <br>
-        <input type="number" ng-model="param_a" ng-init="param_a=0"><br>
-        <input type="number" ng-model="param_b" ng-init="param_b=0"><br>
+        <input type="number" ng-model="param_a" ng-init="param_a=0" placeholder="a= "><br>
+        <input type="number" ng-model="param_b" ng-init="param_b=0" placeholder="b= "><br>
         <!-- <button ng-click="calculate()">See answer</button> -->
         
-        <div ng-repeat="item in calculator">
-            <h3> [{{$index+1}}] a {{item.op}} b = {{item.result}}</h3>
-        </div>
+        <h3 ng-repeat="item in calculator"> 
+            [{{$index+1}}] a {{item.op}} b = {{item.result}}
+        </h3>
+
     </div>
+
+    
+    <input type="text", ng-model="search.id" placeholder="search row">
+    
+    <table class="flat-table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>date</th>
+                <th>x</th>
+                <th>y</th>
+                <!-- <th ng-repeat="col_index in range(1,3)">{{col_index}} </th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in data | filter:search.id">
+                <td> {{item.id}} </td>
+                <td> {{item.date}} </td>
+                <td> {{item.x}} </td>
+                <td> {{item.y}} </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
